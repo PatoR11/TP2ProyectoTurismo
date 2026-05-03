@@ -1,0 +1,23 @@
+{
+  "name": "tp-turismo",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/pabloadmin-next/TP-Turismo#readme",
+  "bugs": {
+    "url": "https://github.com/pabloadmin-next/TP-Turismo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pabloadmin-next/TP-Turismo.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}

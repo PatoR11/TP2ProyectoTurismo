@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencias - JujuyTurismo</title>
+
+    <!-- 1. Bootstrap desde node_modules (npm) -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- 2. Iconos (Bootstrap + FontAwesome para las estrellas) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- 3. Tus estilos personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="index.html"><i class="bi bi-mountain"></i> JujuyTurismo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="agencias.html">Agencias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+                    </ul>
+                    <!-- Botón de Modo Oscuro Unificado -->
+                    <button id="dark-mode-toggle" class="btn btn-outline-light ms-3">
+                        <i id="dark-mode-icon" class="bi bi-moon-stars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5 pt-5">
+        <h1 class="text-center mb-5 titulo-principal">Nuestras Agencias de Confianza</h1>
+
+        <div class="row g-4">
+            <!-- Agencia 1 -->
+            <div class="col-md-4">
+                <article class="agencia-card-flip">
+                    <div class="card-inner">
+                        <div class="card-front shadow-sm border p-3 text-center bg-white rounded">
+                            <img src="img/agencia1.jpg" class="img-fluid rounded mb-3" alt="Jujuy Travel">
+                            <h3>Jujuy Travel</h3>
+                            <p class="mb-1">Calificación:</p>
+                            <div class="rating-estrellas-jquery mb-3">
+                                <i class="fa-regular fa-star star-btn" data-val="1"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="2"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="3"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="4"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="5"></i>
+                            </div>
+                            <button class="btn btn-warning btn-girar-card">Ver detalles</button>
+                        </div>
+                        <div class="card-back shadow-sm border p-3 text-center bg-dark text-white rounded">
+                            <h3>Detalles</h3>
+                            <p>Especialistas en Puna y Yungas. Guías bilingües con certificación nacional.</p>
+                            <div class="d-grid gap-2">
+                                <a href="#seccion-formulario" class="btn btn-primary">Contactar</a>
+                                <button class="btn btn-outline-light btn-girar-card">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Agencia 2 -->
+            <div class="col-md-4">
+                <article class="agencia-card-flip">
+                    <div class="card-inner">
+                        <div class="card-front shadow-sm border p-3 text-center bg-white rounded">
+                            <img src="img/agencia2.jpg" class="img-fluid rounded mb-3" alt="Puna Aventuras">
+                            <h3>Puna Aventuras</h3>
+                            <p class="mb-1">Calificación:</p>
+                            <div class="rating-estrellas-jquery mb-3">
+                                <i class="fa-regular fa-star star-btn" data-val="1"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="2"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="3"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="4"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="5"></i>
+                            </div>
+                            <button class="btn btn-warning btn-girar-card">Ver detalles</button>
+                        </div>
+                        <div class="card-back shadow-sm border p-3 text-center bg-dark text-white rounded">
+                            <h3>Experiencias Puna</h3>
+                            <p>Trekking y 4x4. Experiencias extremas en Salinas Grandes y el Hornocal.</p>
+                            <div class="d-grid gap-2">
+                                <a href="#seccion-formulario" class="btn btn-primary">Contactar</a>
+                                <button class="btn btn-outline-light btn-girar-card">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Agencia 3 -->
+            <div class="col-md-4">
+                <article class="agencia-card-flip">
+                    <div class="card-inner">
+                        <div class="card-front shadow-sm border p-3 text-center bg-white rounded">
+                            <img src="img/agencia3.jpg" class="img-fluid rounded mb-3" alt="Quebrada Tours">
+                            <h3>Quebrada Tours</h3>
+                            <p class="mb-1">Calificación:</p>
+                            <div class="rating-estrellas-jquery mb-3">
+                                <i class="fa-regular fa-star star-btn" data-val="1"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="2"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="3"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="4"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="5"></i>
+                            </div>
+                            <button class="btn btn-warning btn-girar-card">Ver detalles</button>
+                        </div>
+                        <div class="card-back shadow-sm border p-3 text-center bg-dark text-white rounded">
+                            <h3>Cultura y Sabor</h3>
+                            <p>Circuitos culturales y gastronómicos en Tilcara y Humahuaca.</p>
+                            <div class="d-grid gap-2">
+                                <a href="#seccion-formulario" class="btn btn-primary">Contactar</a>
+                                <button class="btn btn-outline-light btn-girar-card">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección Contacto optimizada -->
+    <section id="seccion-formulario" class="container my-5 py-5 border-top">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form id="miFormulario" class="card p-4 shadow-sm">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre completo</label>
+                        <input type="text" id="nombre" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Correo electrónico</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tu mensaje</label>
+                        <textarea id="mensaje" class="form-control" rows="4" required minlength="10"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100 btn-enviar">
+                        <span class="texto-btn">Enviar Mensaje</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Confirmación Bootstrap -->
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">¡Mensaje Enviado!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Gracias por contactarte con JujuyTurismo. Te responderemos pronto.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-5 mt-5">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-md-4 mb-4">
+                    <h5>Suscríbete</h5>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Tu email">
+                        <button class="btn btn-warning" type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-md-4 mb-4 text-center">
+                    <h5>Síguenos</h5>
+                    <div class="fs-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 text-md-end">
+                    <h5>Ubicación</h5>
+                    <p>San Salvador de Jujuy, Argentina</p>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-3 text-center pb-3">
+                <p>© 2026 Turismo Jujuy - Facultad de Ingeniería UNJu</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

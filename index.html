@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Jujuy - Home</title>
+    
+    <!-- Bootstrap desde node_modules (Pedido por el profe) -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <!-- Iconos y Fuentes (CDN externos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#"><i class="bi bi-mountain"></i> JujuyTurismo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html"><i class="bi bi-house-door"></i> Inicio</a></li>
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-map"></i> Destinos
+                            </a>
+                            <div class="dropdown-menu w-100 shadow-lg border-0 p-4">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6 class="text-primary border-bottom pb-2">Norte</h6>
+                                            <a class="dropdown-item" href="destinos.html#religion">Purmamarca</a>
+                                            <a class="dropdown-item" href="destinos.html#gastro">Tilcara</a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6 class="text-primary border-bottom pb-2">Yungas</h6>
+                                            <a class="dropdown-item" href="destinos.html#natura">Calilegua</a>
+                                            <a class="dropdown-item" href="destinos.html#natura">Ledesma</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="agencias.html"><i class="bi bi-briefcase"></i> Agencias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="precios.html"><i class="bi bi-tags"></i> Precios</a></li>
+                    </ul>
+                    <button id="dark-mode-toggle" class="btn btn-outline-light ms-3">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN HERO: Video de fondo corregido -->
+        <section class="hero">
+            <video autoplay muted loop id="video-jujuy" class="video-fondo">
+                <source src="video/video2.mp4" type="video/mp4">
+            </video>
+            <div class="overlay-texto">
+                <h1 class="display-2 fw-bold">Descubre la Magia del Norte</h1>
+                <p class="lead">Experiencias inolvidables en Jujuy</p>
+                <div class="controles-video-hero mt-3">
+                    <button id="btn-play" class="btn btn-outline-light rounded-circle mx-1"><i class="fas fa-play"></i></button>
+                    <button id="btn-pausa" class="btn btn-outline-light rounded-circle mx-1"><i class="fas fa-pause"></i></button>
+                    <button id="btn-mute" class="btn btn-outline-light rounded-circle mx-1"><i class="fas fa-volume-mute"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESTINOS -->
+        <section class="destinos py-5">
+            <div class="container text-center">
+                <h2 class="mb-5">Destinos Destacados</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-4">
+                        <article class="card img-zoom-container shadow border-0 h-100">
+                            <img src="img/purmamarca1.webp" class="card-img-top img-zoom" alt="Purmamarca">
+                            <div class="card-body">
+                                <h3>Purmamarca</h3>
+                                <p>El Cerro de los Siete Colores en todo su esplendor.</p>
+                                <button class="btn btn-warning btn-sm">Ver más</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <article class="card img-zoom-container shadow border-0 h-100">
+                            <img src="img/tilcara.jpeg" class="card-img-top img-zoom" alt="Tilcara">
+                            <div class="card-body">
+                                <h3>Tilcara</h3>
+                                <p>Cultura, historia y paisajes únicos en la Quebrada.</p>
+                                <button class="btn btn-warning btn-sm">Ver más</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESTADÍSTICAS -->
+        <section class="seccion-estadisticas py-5 bg-dark text-white text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <i class="bi bi-people-fill display-4 text-warning"></i>
+                        <h2 class="numero-animado fw-bold" data-target="500">0</h2>
+                        <p class="text-uppercase small">Turistas conformes</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <i class="bi bi-geo-alt-fill display-4 text-warning"></i>
+                        <h2 class="numero-animado fw-bold" data-target="25">0</h2>
+                        <p class="text-uppercase small">Destinos únicos</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <i class="bi bi-camera-fill display-4 text-warning"></i>
+                        <h2 class="numero-animado fw-bold" data-target="1500">0</h2>
+                        <p class="text-uppercase small">Fotos compartidas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section class="testimonios py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Qué dicen nuestros viajeros</h2>
+                <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner text-center">
+                        <div class="carousel-item active">
+                            <blockquote class="blockquote">
+                                <p>"La mejor experiencia de mi vida, Purmamarca es un sueño."</p>
+                                <footer class="blockquote-footer">Juan Pérez</footer>
+                            </blockquote>
+                        </div>
+                        <div class="carousel-item">
+                            <blockquote class="blockquote">
+                                <p>"La atención en las agencias de Jujuy es impecable."</p>
+                                <footer class="blockquote-footer">María García</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHISHING -->
+        <section class="phishing-simulacion py-5 bg-warning text-center">
+            <div class="container py-4">
+                <h3 class="fw-bold"><i class="bi bi-shield-lock"></i> ¿Sabés navegar seguro?</h3>
+                <p class="mb-4">Poné a prueba tus conocimientos sobre seguridad digital antes de viajar.</p>
+                <button type="button" class="btn btn-dark btn-lg shadow" data-bs-toggle="modal" data-bs-target="#modalPhishing">
+                    Iniciar Simulación de Phishing
+                </button>
+            </div>
+        </section>
+
+        <!-- MODAL PHISHING -->
+        <div class="modal fade" id="modalPhishing" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content shadow-lg border-0">
+                    <div class="modal-header bg-danger text-white border-0">
+                        <h5 class="modal-title"><i class="bi bi-exclamation-triangle"></i> Simulador de Seguridad Digital</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <div class="alert alert-info shadow-sm">
+                            <strong><i class="bi bi-info-circle"></i> Instrucción:</strong> Analizá el correo de abajo. Hacé clic en los botones amarillos para descubrir las trampas.
+                        </div>
+                        <div class="card p-4 bg-light border-danger shadow-sm">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted small"><strong>De:</strong> promos@vuelos-jujuy-gratis.tk</span>
+                                <span class="text-muted small">14:30 PM</span>
+                            </div>
+                            <p class="mb-1 text-muted small"><strong>Asunto:</strong> ¡URGENTE! Ganaste un viaje a las Salinas</p>
+                            <hr>
+                            <p>Estimado usuario, hemos detectado que es el ganador de un viaje todo pago. Para reclamar su premio, ingrese sus datos bancarios aquí:</p>
+                            <div class="d-grid gap-3 mt-3">
+                                <button class="btn btn-outline-warning text-dark phishing-element" data-error="🚩 EL DOMINIO: Los sitios '.tk' son gratuitos. Una empresa real usaría '.com.ar' o '.com'.">
+                                    <i class="bi bi-search"></i> Analizar Remitente
+                                </button>
+                                <button class="btn btn-outline-warning text-dark phishing-element" data-error="🚩 EL MENSAJE: Nadie regala viajes por email pidiendo datos bancarios. ¡Es una trampa de urgencia!">
+                                    <i class="bi bi-chat-dots"></i> Analizar Contenido
+                                </button>
+                            </div>
+                        </div>
+                        <div id="phishing-feedback" class="mt-4 alert alert-success d-none"></div>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar simulador</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GALERÍA DE AVENTUREROS -->
+        <section class="galeria py-5 container">
+            <h2 class="text-center mb-4">Galería de Aventureros</h2>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <img src="img/purmamarca1.webp" class="img-fluid foto-galeria rounded shadow cursor-pointer" alt="Amanecer en las Salinas">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/tilcara.jpeg" class="img-fluid foto-galeria rounded shadow cursor-pointer" alt="Paseo por Humahuaca">
+                </div>
+                <div class="col-md-4">
+                    <!-- Reutilizo purmamarca si no tenés otra, para que no se vea el icono de error -->
+                    <img src="img/purmamarca1.webp" class="img-fluid foto-galeria rounded shadow cursor-pointer" alt="Noche en Tilcara">
+                </div>
+            </div>
+        </section>
+
+        <!-- LIGHTBOX (Oculto por CSS) -->
+        <div id="lightbox" class="lightbox-overlay">
+            <span class="cerrar-lightbox">&times;</span>
+            <img id="img-lightbox" src="" alt="Zoom">
+            <div id="caption" class="text-white mt-3 fw-bold text-center"></div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Nuestras Redes</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="sprite-social sprite-fb" data-bs-toggle="tooltip" title="Facebook"></a>
+                        <a href="#" class="sprite-social sprite-ig" data-bs-toggle="tooltip" title="Instagram"></a>
+                        <a href="#" class="sprite-social sprite-tw" data-bs-toggle="tooltip" title="Twitter"></a>
+                    </div>
+                </div>
+                <div class="col-md-8 mb-4">
+                    <h5>Ubicación</h5>
+                    <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden" style="max-height: 200px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.463236359556!2d-65.299516624599!3d-24.18029517844005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f443599d141%3A0xc34cf1f296245388!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses-419!2sar!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center pb-4">
+                <p>© 2026 Turismo Jujuy - Facultad de Ingeniería UNJu</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS de Bootstrap desde node_modules -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Tu JS personalizado -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
