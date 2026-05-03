@@ -1,19 +1,101 @@
-/* Correcciones para compatibilidad Bootstrap + Dark Mode */
+/* ==========================================
+   VARIABLES Y GENERALES
+   ========================================== */
+:root {
+    --color-primario: #007bff;
+    --color-secundario: #ffc107;
+}
 
-/* Asegurar que el fondo del body siempre cambie */
+/* ==========================================
+   HERO VIDEO (index.html)
+   ========================================== */
+.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.video-fondo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.overlay-texto {
+    z-index: 1;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* ==========================================
+   EFECTO FLIP (agencias.html) 
+   ¡ESTO ES LO QUE FALTABA PARA EL GIRO!
+   ========================================== */
+.agencia-card-flip {
+    perspective: 1000px;
+    height: 450px;
+    margin-bottom: 30px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.card-back {
+    background-color: #212529;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* ==========================================
+   MODO OSCURO (Dark Mode)
+   ========================================== */
 body.dark-mode {
     background-color: #121212 !important;
     color: #e0e0e0 !important;
 }
 
-/* Forzar que las cards de Bootstrap se vean bien en oscuro */
 body.dark-mode .card {
     background-color: #1e1e1e !important;
     border-color: #333 !important;
     color: white !important;
 }
 
-/* Ajuste de la tabla de Bootstrap en modo oscuro */
 body.dark-mode .table {
     color: #e0e0e0 !important;
     border-color: #444 !important;
@@ -38,7 +120,9 @@ body.dark-mode .dropdown-item:hover {
     color: var(--color-secundario);
 }
 
-/* Estilo para el efecto de zoom en imágenes */
+/* ==========================================
+   EFECTOS VISUALES Y LIGHTBOX
+   ========================================== */
 .overflow-hidden img {
     transition: transform 0.4s ease;
 }
@@ -46,37 +130,7 @@ body.dark-mode .dropdown-item:hover {
 .img-zoom:hover {
     transform: scale(1.1);
 }
-/* Reemplazo para el Hero Video */
-.hero {
-    position: relative;
-    height: 80vh; /* Altura del video (80% de la pantalla) */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
 
-.video-fondo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Mantiene la proporción sin estirar */
-}
-
-.overlay-texto {
-    z-index: 1;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.4); /* Capa oscura para que resalte el texto */
-    padding: 30px;
-    border-radius: 15px;
-}
 .cerrar-lightbox {
     position: absolute;
     top: 20px;

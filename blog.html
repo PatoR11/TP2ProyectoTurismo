@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Viajes - Turismo Jujuy</title>
-    
-    <!-- 1. Bootstrap desde node_modules (npm) -->
+    <title>Agencias - JujuyTurismo</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    
-    <!-- 2. Iconos de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <!-- 3. Tus estilos personalizados (Siempre al final para que manden) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
 
     <header>
@@ -25,15 +18,13 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-        
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="agencias.html">Agencias</a></li>
                         <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
                     </ul>
-                    <!-- Botón de Modo Oscuro con ID para el icono -->
                     <button id="dark-mode-toggle" class="btn btn-outline-light ms-3">
                         <i id="dark-mode-icon" class="bi bi-moon-stars"></i>
                     </button>
@@ -43,63 +34,70 @@
     </header>
 
     <main class="container mt-5 pt-5">
-        <div class="row">
-            <!-- Columna Principal: Entradas del Blog -->
-            <div class="col-lg-8">
-                <h1 class="mb-4">Crónicas de Jujuy</h1>
-                
-                <article class="card mb-4 shadow-sm border-0">
-                    <img src="img/purmamarca1.webp" class="card-img-top" alt="Salinas Grandes">
-                    <div class="card-body">
-                        <h2 class="card-title h3">5 tips para visitar las Salinas Grandes</h2>
-                        <p class="text-muted small"><i class="bi bi-calendar"></i> 3 de Mayo, 2026 | <i class="bi bi-person"></i> Patricio Luis</p>
-                        <p class="card-text">Las Salinas Grandes son un lugar mágico, pero requieren preparación. Desde el protector solar hasta la hidratación, te contamos todo lo que necesitas saber para disfrutar del desierto blanco.</p>
-                        <a href="#" class="btn btn-warning">Leer más</a>
-                    </div>
-                </article>
-
-                <article class="card mb-4 shadow-sm border-0">
-                    <div class="card-body">
-                        <h2 class="card-title h3">Gastronomía: El sabor de la Quebrada</h2>
-                        <p class="text-muted small"><i class="bi bi-calendar"></i> 1 de Mayo, 2026 | <i class="bi bi-person"></i> Leonel Flores</p>
-                        <p class="card-text">Humitas, tamales y locro. Un recorrido por los mejores puestos de Tilcara y Purmamarca para deleitar el paladar con sabores ancestrales.</p>
-                        <a href="#" class="btn btn-warning">Leer más</a>
+        <h1 class="text-center mb-5 titulo-principal">Nuestras Agencias de Confianza</h1>
+        <div class="row g-4">
+            <!-- Agencias con sistema de Flip Card -->
+            <div class="col-md-4">
+                <article class="agencia-card-flip">
+                    <div class="card-inner">
+                        <div class="card-front shadow-sm border p-3 text-center bg-white rounded">
+                            <img src="img/agencia1.jpg" class="img-fluid rounded mb-3" alt="Jujuy Travel">
+                            <h3>Jujuy Travel</h3>
+                            <div class="rating-estrellas-jquery mb-3">
+                                <i class="fa-regular fa-star star-btn" data-val="1"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="2"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="3"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="4"></i>
+                                <i class="fa-regular fa-star star-btn" data-val="5"></i>
+                            </div>
+                            <button class="btn btn-warning btn-girar-card">Ver detalles</button>
+                        </div>
+                        <div class="card-back shadow-sm border p-3 text-center bg-dark text-white rounded">
+                            <h3>Detalles</h3>
+                            <p>Especialistas en Puna y Yungas. Guías bilingües con certificación nacional.</p>
+                            <div class="d-grid gap-2">
+                                <a href="#seccion-formulario" class="btn btn-primary">Contactar</a>
+                                <button class="btn btn-outline-light btn-girar-card">Volver</button>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
-
-            <!-- Columna Lateral (Sidebar) -->
-            <aside class="col-lg-4">
-                <div class="card mb-4 shadow-sm border-0 p-3 bg-light">
-                    <h4>Sobre el Blog</h4>
-                    <p>Espacio dedicado a compartir las experiencias de nuestros viajeros por la provincia de Jujuy. Parte del proyecto de la Facultad de Ingeniería UNJu.</p>
-                </div>
-
-                <div class="card mb-4 shadow-sm border-0 p-3">
-                    <h4>Categorías</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-dark"><i class="bi bi-chevron-right"></i> Naturaleza</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark"><i class="bi bi-chevron-right"></i> Cultura</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark"><i class="bi bi-chevron-right"></i> Gastronomía</a></li>
-                    </ul>
-                </div>
-            </aside>
+            <!-- Repetir estructura para Agencia 2 y 3 -->
         </div>
     </main>
 
+    <section id="seccion-formulario" class="container my-5 py-5 border-top">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form id="miFormulario" class="card p-4 shadow-sm">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre completo</label>
+                        <input type="text" id="nombre" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Correo electrónico</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tu mensaje</label>
+                        <textarea id="mensaje" class="form-control" rows="4" required minlength="10"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100 btn-enviar">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <footer class="bg-dark text-white pt-5 mt-5">
-        <div class="container text-center pb-4">
+        <div class="container text-center pb-3">
             <p>© 2026 Turismo Jujuy - Facultad de Ingeniería UNJu</p>
         </div>
     </footer>
 
-    <!-- 1. JS de Bootstrap desde node_modules (Pedido por el profe) -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- 2. jQuery (Necesario para tus scripts personalizados) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
-    <!-- 3. Tu JS personalizado (Debe ir después de jQuery) -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
